@@ -78,6 +78,10 @@ abstract class Action
         return $this->args[$name];
     }
 
+    protected function retError(string $error){
+        throw new HttpBadRequestException($this->request, $error);
+    }
+
     /**
      * @param array|object|null $data
      */

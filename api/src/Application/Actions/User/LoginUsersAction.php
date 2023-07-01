@@ -9,7 +9,7 @@ use App\Application\Actions\Db as Db;
 use Firebase\JWT\JWT;
 use App\Application\Helpers\Crypt as Crypt;
 use App\Application\Actions\GeneralAction as GeneralAction;
-
+use Slim\Exception\HttpBadRequestException;
 class LoginUsersAction extends GeneralAction
 {
     /**
@@ -38,7 +38,9 @@ class LoginUsersAction extends GeneralAction
                 $myArray["token"]=$token;
                 return $this->respondWithData($myArray,200);
             }else{
-                return $this->respondWithData("Usuario / contraseña incorrecta",400);
+            
+                //throw new \Exception();
+                $this->retError( "Usuario / contraseña incorrecta");
             }
             
             $db = null;
