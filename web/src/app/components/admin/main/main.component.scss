@@ -1,0 +1,9 @@
+.top{background-color: #00ACEE;padding: 10px 0px;}
+.top .actions{}
+.top .actions .notificaciones{display: inline-block;position: relative;}
+.top .actions .notificaciones .number{font-size: 15px;position: absolute;border-radius: 50%;height: 35px;width: 35px;background-color: #595959;text-align: center;color:#fff;left: -20px;}
+.top .actions .notificaciones .number span{position: relative;top: 5px;}
+.top .actions .menu{display: inline-block;margin-left: 30px;}
+.top .actions i{color:#fff;font-size: 40px;}
+
+.footer{position: fixed;width: 100%;left: 0px;background-color: #00ACEE;bottom: 0px;padding: 30px 0px;}

@@ -1,8 +1,11 @@
 export class Usuarios {
-  Idusuario: number;
-  Nombre: string;
-  Email: string;
-  Usuario: string;
-  Token?: string;
-  RolDeposito:string;
+
+  apellido:string;
+  email:string;
+  establecimiento:number;
+  nombre:string;
+  servicio:number;
+  tipo:string;
+  token?: string;
+  uid:number;
 }

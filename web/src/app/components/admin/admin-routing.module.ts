@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { HomeComponent } from './home/home.component';
+import { SolicitudComponent } from './solicitud/solicitud.component';
+import { BuscarEquiposComponent } from './buscar-equipos/buscar-equipos.component';
+import { ResultadosBusquedaComponent } from './resultados-busqueda/resultados-busqueda.component';
 
     const routes: Routes = [
     {
@@ -11,6 +14,18 @@ import { HomeComponent } from './home/home.component';
         {
           path: 'home',
           component: HomeComponent,
+        },
+        {
+          path: 'solicitud',
+          component: SolicitudComponent,
+        },
+        {
+          path: 'buscar',
+          component: BuscarEquiposComponent,
+        },
+        {
+          path: 'resultados',
+          component: ResultadosBusquedaComponent,
         },
       ]
     }

@@ -14,4 +14,5 @@ abstract class GeneralAction extends Action
     {
         parent::__construct($logger);
     }
+    
 }

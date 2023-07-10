@@ -1,0 +1,46 @@
+<div class="contenido">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="navegacion">
+                    <div class="row">
+                        <div class="col-10 align-self-center">
+                            <h2>Buscar equipo</h2>
+                        </div>
+                        <div class="col-2 align-self-center">
+                            <i class="fas fa-arrow-left" role="button" (click)="home()"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <select [(ngModel)]="servicio" name="servicio" class="form-select form-control mb-3" placeholder="Servicio">
+                        <option value="">Seleccione un servicio</option>
+                        <option *ngFor="let objs of servicios"  [ngValue]="objs.id">{{objs.nombre}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" [(ngModel)]="nroserie" name="usuario"  class="form-control mb-3" placeholder="Ingresar N° de Serie" />
+                </div>
+                <div class="form-group">
+                    <input type="text" [(ngModel)]="codinterno" name="usuario"  class="form-control mb-3" placeholder="Ingresar Código Interno" />
+                </div>
+                <div class="form-group">
+                    <select [(ngModel)]="equipo" name="equipo" class="form-select form-control mb-3" placeholder="Servicio">
+                        <option value="">Seleccione un equipo</option>
+                        <option *ngFor="let obje of equipos"  [ngValue]="obje.id">{{obje.marca}} {{obje.modelo}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 offset-2 text-center">
+                <button class="btn rounded btn-primary w-100" (click)="buscar()">BUSCAR EQUIPO</button>
+            </div>
+        </div>
+
+    </div>
+</div>

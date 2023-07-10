@@ -2,3 +2,15 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+body{background-color: #E1F2FF; font-family: 'Manrope', sans-serif;}
+.btn-primary{background-color: #00ACEE;border: 0px;}
+.form-control{border-radius: 20px;padding: 0.7rem;}
+.btn{padding: 0.7rem;}
+.btn.rounded{border-radius: 55px !important;}
+.btn-white{background-color: #fff;color:#00ACEE}
+.btn-white:hover{background-color: #00ACEE;color:#fff}
+
+.contenido{padding-top: 30px;margin-bottom: 150px;}
+.contenido .navegacion{border-bottom: 1px solid #00ACEE;margin-bottom: 30px;}
+.contenido .navegacion h2{color: #00ACEE;font-weight: 700;}
+.contenido .navegacion i{color: #00ACEE;font-size: 20px;float: right;}

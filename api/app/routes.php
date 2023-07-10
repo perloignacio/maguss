@@ -8,7 +8,10 @@ use App\Application\Actions\User\ViewUserAction;
 use App\Application\Actions\Servicios\ViewServiciosAction;
 use App\Application\Actions\Servicios\ViewServiciosUserAction;
 use App\Application\Actions\Establecimientos\ViewEstablecimientosAction;
+use App\Application\Actions\Equipos\ViewEquiposAction;
 use App\Application\Actions\Establecimientos\ViewEstablecimientosByIdAction;
+use App\Application\Actions\Solicitudes\CreateSolicitudesAction;
+use App\Application\Actions\Solicitudes\ViewSolicitudesAction;
 
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -28,6 +31,11 @@ return function (App $app) {
     $app->group('/admin/establecimientos', function (Group $group) {
         $group->get('', ViewEstablecimientosAction::class);
         $group->get('/{id}', ViewEstablecimientosByIdAction::class);
+    });
+    $app->post('/admin/equipos', ViewEquiposAction::class);
+    $app->group('/admin/solicitudes', function (Group $group) {
+        $group->post('', CreateSolicitudesAction::class);
+        $group->get('', ViewSolicitudesAction::class);
     });
     /*
     $app->get('/admin/servicios', function (Request $request, Response $response) {
