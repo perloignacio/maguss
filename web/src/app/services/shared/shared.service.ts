@@ -7,5 +7,6 @@ import { Equipos } from '@app/models/equipos';
 export class SharedService {
   equiposBusqueda:Equipos[]=[]
   equipoSolicitud:Equipos;
+
   constructor() { }
 }

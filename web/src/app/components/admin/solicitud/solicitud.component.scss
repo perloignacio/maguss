@@ -1,0 +1,31 @@
+.resultados .res{background-color: #a5a5a5;border-radius: 20px;padding: 15px;margin-bottom: 20px;color:#fff}
+.resultados .res p{margin-bottom: 5px !important;}
+.resultados .res i{font-size: 20px;}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button-container button {
+    margin: 20px;
+    padding: 15px;
+    color:#fff;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .button-container .row1 button {
+    background-color: #00ACEE;
+}
+  .button-container .row2 button:nth-child(1) {
+    background-color: #ff0000;
+}
+
+  .button-container .row2 button:nth-child(2) {
+    background-color: #ffae00
+  }
+
+  .button-container .row2 button:nth-child(3) {
+    background-color: #00ACEE;
+  }

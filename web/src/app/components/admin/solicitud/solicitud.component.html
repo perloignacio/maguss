@@ -1,1 +1,115 @@
-<p>solicitud works!</p>
+<div class="contenido">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="navegacion">
+                    <div class="row">
+                        <div class="col-10 align-self-center">
+                            <h2>Nueva Solicitud</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="resultados" *ngIf="equipos">
+            <div class="row" >
+                <div class="col-12">
+                    <div class="res">
+                        <div class="row">
+                            <div class="col-11">
+                                <h3>{{equipos.nombreServicio}}</h3>
+                                <p>{{equipos.marca}}</p>
+                                <p>{{equipos.modelo}}</p>
+                                <p>N° serie: {{equipos.serie}}</p>
+                                <p *ngIf="equipos.codigo_interno!=''">Cod interno: {{equipos.codigo_interno}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="row">
+            <div class="col-12">
+                <div class="navegacion">
+                    <div class="row">
+                        <div class="col-10 align-self-center">
+                            <h2>Situación del equipo</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container row1" [(ngModel)]="obj.funciona" >
+                <button class="btn rounded btn-primary w-100">NO Funciona</button>
+                <button class="btn rounded btn-primary w-100">Funciona con fallas</button>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="navegacion">
+                    <div class="row">
+                        <div class="col-10 align-self-center">
+                            <h2>Urgencia de la Solicitud</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="button-container row2" [(ngModel)]="obj.urgencia">
+                <button class="btn rounded btn-primary w-100">ALTA</button>
+                <button class="btn rounded btn-primary w-100">MEDIA</button>
+                <button class="btn rounded btn-primary w-100">BAJA</button>
+        </div>
+
+        
+        <div>
+            <textarea name="inconveniente" [(ngModel)]="obj.inconveniente" class="form-control mb-3" placeholder="Inconveniente" rows="3">
+            </textarea>
+        </div>
+
+        <div>
+            <textarea name="descripcion" [(ngModel)]="obj.description" class="form-control mb-3" placeholder="Descripción" rows="3">
+            </textarea>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="navegacion">
+                    <div class="row">
+                        <div class="col-10 align-self-center">
+                            <h2>Datos de Contacto</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <input type="text" [(ngModel)]="obj.nombre" name="nombre" class="form-control mb-3" placeholder="Nombre y Apellido">
+        </div>
+        <div>
+            <input type="text" [(ngModel)]="obj.email" name="email" class="form-control mb-3" placeholder="E-mail">
+        </div>
+        <div>
+            <input type="text" [(ngModel)]="obj.cargo" name="cargo" class="form-control mb-3" placeholder="Cargo">
+        </div>
+        <div>
+            <input type="text" [(ngModel)]="obj.telefono" name="telefono" class="form-control mb-3" placeholder="Teléfono o número de interno">
+        </div>
+        <div>
+            <input type="text" [(ngModel)]="obj.horario" name="horario" class="form-control mb-3" placeholder="Horario de contacto">
+        </div>
+
+        <div class="button-container row2">
+            <button class="btn rounded btn-primary w-100" (click)="guardar()">CARGAR</button>
+            <button class="btn rounded btn-primary w-100">CANCELAR</button>    
+        </div>
+
+    </div>
+</div>

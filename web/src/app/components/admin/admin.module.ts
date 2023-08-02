@@ -9,13 +9,17 @@ import { HomeComponent } from './home/home.component';
 import { SolicitudComponent } from './solicitud/solicitud.component';
 import { BuscarEquiposComponent } from './buscar-equipos/buscar-equipos.component';
 import { ResultadosBusquedaComponent } from './resultados-busqueda/resultados-busqueda.component';
+import { NumeroSolicitudComponent } from './numero-solicitud/numero-solicitud.component';
+import { ActivasComponent } from './activas/activas.component';
 @NgModule({
     declarations: [
     MainComponent,
     HomeComponent,
     SolicitudComponent,
     BuscarEquiposComponent,
-    ResultadosBusquedaComponent
+    ResultadosBusquedaComponent,
+    NumeroSolicitudComponent,
+    ActivasComponent
   ],
     exports:[
       
